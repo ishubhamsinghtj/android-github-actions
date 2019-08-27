@@ -1,5 +1,9 @@
 FROM vgaidarji/docker-android-build:1.0.0
 
+RUN echo "\n24333f8a63b6825ea9c5514f83c2829b004d1fee" > /opt/android-sdk/licenses/android-sdk-license
+RUN echo 'y' | android update sdk --no-ui --all --filter "build-tools-28.0.3"
+RUN echo 'y' | android update sdk --no-ui --all --filter "android-29"
+
 ###################
 # GitHub Action description
 ###################
